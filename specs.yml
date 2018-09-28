@@ -123,47 +123,6 @@ Création d’une partie:
     priority: P0
 
 
-Entitées:
-  - title: Les bâtiments existent en plusieurs types
-    descr: Chaque type de bâtiment a des avantages et des soucis
-    priority: P0
-
-  - title: Une structure a un multiplicateur de la joie de la population
-    tasks:
-      - title: >
-          Implémenter un multiplicateur constant sur chaque type de structure
-          qui affecte la joie et la bonne humeur de la population
-          lors de la mise en place de cette structure.
-    priority: P1
-
-  - title: Une structure a un multiplicateur de crime
-    tasks:
-      - title: >
-          Implémenter un multiplicateur constant sur chaque type de structure
-          qui affecte le taux de criminalité de la ville
-          lors de la mise en place de cette structure.
-    priority: P1
-
-  - title: Une structure a un multiplicateur de bruits environnants
-    tasks:
-      - title: >
-          Implémenter un multiplicateur constant sur chaque type de structure
-          qui affecte le nuisance sonore de la ville d'une manière générale
-          lors de la mise en place de cette structure.
-    priority: P1
-
-  - title: Une structure a un coût journalier
-    tasks:
-      - title: >
-          Implémenter un coût constant journalier de base sur chaque type de structure
-          qui affecte le budget du maire lors de la mise en place de cette structure.
-      - title: >
-          Implémenter le calcul d'un coût variable en fonction
-          du taux d'utilisation de la structure,
-          c'est-à-dire en fonction du nombre d'habitants et du type de structure.
-    priority: P0
-
-
 Statistiques:
   - title: Taux de SDF
     priority: P2
@@ -193,6 +152,11 @@ Statistiques:
 Actions:
   - title: La démolition d’un batiment entraîne des coûts
     descr: Coûts monaitaires, réputation, commerces, etc.
+    priority: P1
+    tasks:
+      - title: >
+          Ajouter une méthode permettant la démolition d'une structure donnée.
+          La démolition donnera des conséquences prédéfinies (constantes) au joueur.
 
   - title: >
       Les arrêtés minicipaux entrainent
@@ -200,6 +164,7 @@ Actions:
     descr: >
       Le joueur peut prendre des décisions qui pourront mener
       à des coûts monaitaires, réputation, avis, crimes, etc.
+    priority: P2
     tasks:
       - title: >
           Créer un gestionnaire d'arrêtés minicipaux
@@ -212,38 +177,99 @@ Actions:
 Menu principal:
   - title: Option pour charger un tutoriel
     descr: Expliquer au joueur comment le jeu marche
+    priority: P3
+    tasks:
+      - title: >
+          Ajouter un épisode de démonstration des mécanismes principaux.
+      - title: >
+          Ajouter une entrée sur le menu principal permettant
+          au joueur de lancer le tutoriel.
 
   - title: Option pour charger une partie existante
+    priority: P1
+    tasks:
+      - title: >
+          Mettre en place une sérialisation et désérialisation de sauvegardes de parties.
+          Cela devra supporter au minimum dix parties différentes sans avoir à écraser les anciennes.
+      - title: >
+          Mettre une option sur le menu principal permettant de charger une sauvegarde.
 
-  - title: Option pour charger une nouvelle partie sans écraser les anciennes
+  - title: Option pour créer une nouvelle partie sans écraser les anciennes
+    priority: P0
+    tasks:
+      - title: >
+          Créer une option qui lance et crée une nouvelle partie.
 
 
 Menu en partie:
   - title: Fenêtre de gestion de tous les paramètres du jeu
+    priority: P3
+    tasks:
+      - title: >
+          Ajouter une vue de paramètrage qui
+          change la vitesse de défillement du texte et la langue.
 
   - title: Option pour sauvegarder la partie (nommée) en cours
-
-  - title: Option pour recommencer depuis zéro
+    priority: P2
+    tasks:
+      - title: >
+          Ajouter une option "sauvegarder sous..." en bas de la fenêtre
+          permettant de selectionner un emplacement de sauvegarde (donc ouvrir un menu).
+      - title: >
+          Ajouter une option "quick save" en bas de la fenêtre
+          qui écrase la dernière sauvegarde effectuée.
 
   - title: Option pour charger une partie
+    priority: P3
+    tasks:
+      - title: >
+          Ajouter une option "charger" en bas de la fenêtre
+          permettant de selectionner une sauvegarde à charger (donc ouvrir un menu).
 
   - title: Option pour quitter le jeu
     descr: Doit demander une confirmation
+    priority: P2
+    tasks:
+      - title: >
+          Ajouter une option "quitter" en bas de la fenêtre
+          permettant de quitter le jeu. Le jeu demandera une confirmation.
 
 
 Conséquences des choix:
   - title: Coût
     descr: Choisir de construire une structure coûte de l’argent
+    priority: P0
+    tasks:
+      - title: >
+          Lorsque le joueur décide de construire,
+          cela doit lui coûter une somme donnée sur son budget.
 
   - title: Popularité du maire et de la ville
     descr: Construire une structure impacte la popularité du maire et de la ville
-
-  - title: Entretien
-    descr: Construire une structure va entraîner coût à interval régulier
+    priority: P0
+    tasks:
+      - title: >
+          Lorsque le joueur décide de construire,
+          la structure doit apporter ou enlever
+          des points de popularité en fonction du type de structure.
 
   - title: Zone d’effet
     descr: >
       Chaque structure à un impacte sur les structures environnantes (ex.: tourisme, bruit, etc.)
+    priority: P1
+    tasks:
+      - title: >
+          Implémenter un multiplicateur constant sur chaque type de structure
+          qui affecte le nuisance sonore de la ville d'une manière générale
+          lors de la mise en place de cette structure.
+      - title: >
+          Implémenter un multiplicateur constant sur chaque type de structure
+          qui affecte le taux de criminalité de la ville
+          lors de la mise en place de cette structure.
+      - title: >
+          Implémenter un multiplicateur constant sur chaque type de structure
+          qui affecte la joie et la bonne humeur de la population
+          lors de la mise en place de cette structure.
 
   - title: Évènements aléatoires
     descr: De manière aléatoire, des structures déclecheront des évènements désaventageux ou aventageux (incendie, tornade, vols, etc.)
