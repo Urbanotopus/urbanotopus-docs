@@ -1,0 +1,22 @@
+.collapsible {
+  cursor: pointer;
+
+  &.collapsible-opened {
+    :last-child:after, :first-child:after {
+      content: '';
+    }
+  }
+  :last-child, :first-child {
+    position: relative;
+    &:after {
+      position: absolute;
+      color: rgba($dark, 0.5);
+      float: right;
+      font-family: 'Font Awesome 5 Free';
+      content: '';
+      right: 0;
+      bottom: 0;
+      padding: $spacer / 2 $spacer / 2;
+    }
+  }
+}
