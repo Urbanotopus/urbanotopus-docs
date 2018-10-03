@@ -1,5 +1,9 @@
-# Urbanotopus Docs
-Documentation and specs for Urbanotopus.
+<p align='center'>
+  <img alt='' src='static/images/octopus.png'>
+</p>
+
+<h1 align='center'>Urbanotopus Docs</h1>
+<p align='center'>Documentation and specs for Urbanotopus.</p>
 
 ## How does it work
 1. Pull requests are created to write changes to master;
