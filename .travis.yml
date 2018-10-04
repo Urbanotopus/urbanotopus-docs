@@ -5,22 +5,16 @@ python:
   - "3.7"
 cache:
   pip: true
-  directories:
-    - node_modules
 env:
   global:
     - BUILD_PATH=gh-pages-build
 install:
   - pip install -U pip setuptools wheel
   - pip install -r requirements.txt
-  - nvm install 10
-  - npm i
 script:
-  - npm run build-assets --production
-  - ./build.sh
-  - mkdir -p ${BUILD_PATH}/static/assets
-  - cp -Rv static/assets/* ${BUILD_PATH}/static/assets
-  - cp -Rv public/* $BUILD_PATH
+  - make html
+  - mkdir -p ${BUILD_PATH}
+  - cp -Rv build/* $BUILD_PATH
 deploy:
   provider: pages
   local-dir: $BUILD_PATH
