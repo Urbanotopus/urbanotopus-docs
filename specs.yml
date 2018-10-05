@@ -136,20 +136,43 @@ Statistiques:
   - title: Avis de la population
     descr: >
       <ul>
-        <li>Écologistes ;</li>
         <li>
-          Enfants
+          La population doit pouvoir donner son avis sur les actions
+          et variables de la partie du joueur,
+          que cela soit via Twitter ou via les différents services d'information.
         </li>
         <li>
-          Jeunes
-          <em>qui cassent,
-          salissent mais sont absents en journée</em> ;
+          La population est composée de plusieurs catégories, qui sont :
+          les écologistes, les enfants et leurs parents,
+          les jeunes, les sans-abris, les retraités, et les cadres.
         </li>
-        <li>Sans-abris ;</li>
-        <li>Retraités ;</li>
-        <li>Cadres ;</li>
+        <li>
+          Chacun de ces types a des besoins différents et des influences différentes.
+        </li>
       </ul>
-    priority: P0
+    tasks:
+      - title: >
+          Une base de données d'avis doit être construite.
+          Cette base de données doit retourner des avis qui
+          sont en accordances avec l'état (valeur)
+          des variables de la partie du joueur lorsque interrogée.<br/>
+          De plus, le texte de l'avis peut être généré ou constant
+          permettant un maximum d'unicité entre les avis.<br/>
+          Les avis ont donc :
+          <ul>
+            <li>Des rangées de conditions pour pouvoir apparaître ;</li>
+            <li>
+              A un texte constant ou automatiquement généré
+              lorsque le texte est récupéré via son getter.
+            </li>
+          </ul>
+        assigned: Martin
+      - title: >
+          On a un flux Twitter-Like qui regroupe un ensemble
+          de tweets de la population qui ont été générés
+          et qui sont affichés via une template HTML.
+        assigned: UNK
+    priority: P2
 
   - title: Revenues des commerçants
     priority: P1
