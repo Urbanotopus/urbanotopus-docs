@@ -133,11 +133,23 @@ Statistiques:
   - title: Attraction de la ville
     priority: P1
 
-  - title: Taxes
+  - title: Avis de la population
     descr: >
-      Les taxes payées par les habitants,
-      commerçants et entreprises rapportent une somme mensuellement
-    priority: P1
+      <ul>
+        <li>Écologistes ;</li>
+        <li>
+          Enfants
+        </li>
+        <li>
+          Jeunes
+          <em>qui cassent,
+          salissent mais sont absents en journée</em> ;
+        </li>
+        <li>Sans-abris ;</li>
+        <li>Retraités ;</li>
+        <li>Cadres ;</li>
+      </ul>
+    priority: P0
 
   - title: Revenues des commerçants
     priority: P1
@@ -272,7 +284,10 @@ Conséquences des choix:
           lors de la mise en place de cette structure.
 
   - title: Évènements aléatoires
-    descr: De manière aléatoire, des structures déclecheront des évènements désaventageux ou aventageux (incendie, tornade, vols, etc.)
+    descr: >
+      De manière aléatoire, des structures déclecheront
+      des évènements désaventageux ou aventageux
+      (incendie, tornade, vols, écologistes mécontents, etc.)
 
   - title: Évènements recurrents
     descr: Taxes, utilisation de l’eau, revenus, …
