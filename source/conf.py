@@ -132,7 +132,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (master_doc, 'urbanotopus.tex', 'urbanotopus Documentation',
-     'KOCAK Mikail, GROSJEAN Martin, RAZAFINDRATSITA Loïc', 'manual'),
+     author, 'manual'),
 ]
 
 
