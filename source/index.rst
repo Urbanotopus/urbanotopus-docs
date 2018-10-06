@@ -11,4 +11,6 @@ Bienvenue sur la documentation d'urbanotopus's !
     :caption: Contenu
 
     introduction
+    architecture
+    contributing
     ressources
