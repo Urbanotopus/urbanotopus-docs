@@ -65,6 +65,7 @@ script:
   - make html
   - mkdir -p ${BUILD_PATH}
   - cp -Rv build/* $BUILD_PATH
+  - cp -Rv source/ $BUILD_PATH
 
 before_cache:
   - >
